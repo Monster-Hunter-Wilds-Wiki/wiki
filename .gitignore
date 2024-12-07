@@ -1,0 +1,6 @@
+.env
+.env.prod
+images/
+vendor/
+cache/
+db_imports/
