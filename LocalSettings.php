@@ -96,13 +96,7 @@ $wgSharedTables[] = "actor";
 $wgMainCacheType = CACHE_NONE;
 $wgMemCachedServers = [];
 
-## To enable image uploads, make sure the 'images' directory
-## is writable, then set this to true:
-$wgEnableUploads = true;
-// $wgMaxUploadSize = ;
-// $wgUseImageMagick = true;
-$wgUseImageMagick = false;
-$wgImageMagickConvertCommand = '/usr/bin/convert';
+include 'config/uploads.php';
 
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
 $wgUseInstantCommons = false;
