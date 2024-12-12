@@ -131,6 +131,10 @@ $wgUpgradeKey = $env['UPGRADE_KEY'];
 $wgDiff3 = '/usr/bin/diff3';
 
 # Configs
+// Prevent preproduction/sandbox indexation
+if (str_contains($_SERVER['SERVER_NAME'], 'pierretusseau.com')) {
+	$wgDefaultRobotPolicy = 'noindex,nofollow';
+}
 include 'config/licenses.php';
 include 'config/skins.php';
 include 'config/extensions.php';
