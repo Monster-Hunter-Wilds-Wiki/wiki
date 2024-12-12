@@ -1,6 +1,8 @@
 #mw-header {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 #header-logo {
@@ -15,5 +17,31 @@
     font-size: @text-lg;
     font-weight: bold;
     border: none;
+  }
+}
+
+.header-user {
+  position: relative;
+
+  &-menu {
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-xs;
+    white-space: nowrap;
+    background-color: #111;
+    padding: @spacing-md;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .header-user-menu {
+      opacity: 100;
+      pointer-events: all;
+    }
   }
 }

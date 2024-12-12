@@ -1,0 +1,17 @@
+<div class="header-user">
+  {{#comment}}
+  <h3>{{user.name}}</h3>
+  {{/comment}}
+  <h3>Account</h3>
+  {{#data-portlets}}{{#data-user-menu}}
+    <div 
+      role="navigation"
+      id="{{id}}"
+      class="header-user-menu {{class}}"
+      title="{{html-tooltip}}"
+      aria-labelledby="{{id}}-label"
+    >
+      {{#array-items}}{{>ListItem}}{{/array-items}}
+    </div>
+  {{/data-user-menu}}{{/data-portlets}}
+</div>

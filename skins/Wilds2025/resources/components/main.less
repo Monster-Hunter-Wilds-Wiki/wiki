@@ -1,0 +1,28 @@
+main {
+  // overflow: hidden;
+}
+
+.main-background-image {
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+
+  img {
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 852px;
+    height: 1287px;
+    opacity: 0.25;
+  }
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
