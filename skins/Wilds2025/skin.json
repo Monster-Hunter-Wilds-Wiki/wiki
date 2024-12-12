@@ -14,7 +14,7 @@
 	},
 	"ValidSkinNames": {
 		"example": {
-			"class": "SkinMustache",
+			"class": "MediaWiki\\Skins\\Wilds2025\\SkinWilds2025",
 			"args": [
 				{
 					"name": "example",
@@ -85,6 +85,9 @@
 		"example": {
 			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
 		}
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Skins\\Wilds2025\\": "includes/"
 	},
 	"manifest_version": 2
 }
