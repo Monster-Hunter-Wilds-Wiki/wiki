@@ -1,0 +1,142 @@
+.skin-json {
+	&-validation {
+		&-element {
+			--color-skinjson-surface: #eaddff;
+			--color-skinjson-surface--hover: #f6edff;
+			--color-skinjson-surface--active: #d0bcff;
+			--color-skinjson-text: #21005d;
+
+			a {
+				display: block;
+				background: var( --color-skinjson-surface );
+				font-size: 0.8125rem;
+				line-height: 1.25;
+				text-align: start;
+				text-decoration: none;
+				width: 2rem;
+				height: 2rem;
+				opacity: 0.5;
+
+				&:before {
+					.skin-skinjson-popups-enabled & {
+						content: '➕';
+						position: absolute;
+						left: 0;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+
+				&:hover {
+					// So user can see it even when it is under another element
+					position: relative;
+					z-index: 101; // High enough that it is always at the top
+					background: var( --color-skinjson-surface--hover );
+				}
+
+				&:active {
+					background: var( --color-skinjson-surface--active );
+				}
+			}
+
+			&__title {
+				color: var( --color-skinjson-text );
+				font-family: 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace; // WMUI monospace fonts
+				font-size: 0.875rem;
+				font-weight: bold;
+			}
+
+			&__description {
+				color: #222;
+			}
+		}
+	}
+
+	&-overlay {
+		position: fixed;
+		z-index: 1000;
+		left: 0;
+		right: 0;
+		width: 100%;
+		bottom: 8px;
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 8px;
+
+		// This is temporary
+		> div {
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			font-size: 0.7em;
+			place-content: center;
+			user-select: none;
+		}
+	}
+
+	&-toggle {
+		display: grid;
+		background-color: #00af89; // WMUI Green 50
+		color: #fff;
+		text-transform: uppercase;
+
+		&--off {
+			background-color: #d33; // WMUI Red 50
+			color: #fff;
+		}
+	}
+
+	&-score {
+		position: relative;
+		display: none;
+
+		&-high {
+			background-color: #00af89; // WMUI Green 50
+			color: #fff;
+		}
+
+		&-med {
+			background-color: #fc3; // WMUI Yellow 50
+			color: #000;
+		}
+
+		&-low {
+			background-color: #d33; // WMUI Red 50
+			color: #fff;
+		}
+
+		// Popup
+		&-info {
+			position: absolute;
+			right: 0;
+			bottom: 100%;
+			display: none;
+			width: 200px;
+			padding: 8px;
+			margin-bottom: 8px;
+			background: inherit;
+			text-align: left;
+		}
+
+		&:hover &-info {
+			display: block;
+		}
+	}
+
+	// Show SkinJSON elements
+	&--visible {
+		.skin-json {
+			&-score {
+				display: grid;
+			}
+
+			&-validation-element {
+				display: revert;
+			}
+		}
+	}
+}

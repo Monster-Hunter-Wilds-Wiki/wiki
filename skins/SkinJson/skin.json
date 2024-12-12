@@ -1,0 +1,128 @@
+{
+	"name": "SkinJson",
+	"version": "1.3.0",
+	"author": "Jon Robson",
+	"url": "https://github.com/jdlrobson/mediawiki-skins-skinjson",
+	"descriptionmsg": "skinjson-desc",
+	"namemsg": "skinname-skinjson",
+	"license-name": "CC0-1.0",
+	"type": "skin",
+	"attributes": {
+		"Popups": {
+			"PluginModules": [
+				"skins.skinjson.popup"
+			]
+		}
+	},
+	"requires": {
+		"MediaWiki": ">= 1.38.0"
+	},
+	"ValidSkinNames": {
+		"skinjson": {
+			"class": "SkinJSON",
+			"skippable": true,
+			"args": [ {
+				"format": "json",
+				"name": "skinjson"
+			} ]
+		}
+	},
+	"AutoloadClasses": {
+		"SkinJSON": "SkinJSON.php"
+	},
+	"AutoloadNamespaces": {
+		"SkinJSON\\": "includes/"
+	},
+	"callback": "SkinJSON::onRegistration",
+	"DefaultUserOptions": {
+		"skinjson-popups": 1
+	},
+	"ResourceModules": {
+		"skins.skinjson.validate": {
+			"es6": true,
+			"dependencies": [ "mediawiki.user" ],
+			"scripts": [ "skinValidate.js" ],
+			"styles": [ "skinValidate.less" ],
+			"targets": [ "desktop", "mobile" ]
+		},
+		"skins.skinjson.debug.styles": {
+			"styles": [ "skindebug.css" ],
+			"targets": [ "desktop", "mobile" ]
+		},
+		"skins.skinjson.debug": {
+			"es6": true,
+			"scripts": [ "skindebug.js" ],
+			"targets": [ "desktop", "mobile" ]
+		},
+		"skins.skinjson.popup": {
+			"es6": true,
+			"messages": [
+				"popups-settings-option-skinjson-tooltip",
+				"popups-settings-option-skinjson-tooltip-description"
+			],
+			"scripts": [ "skinpopup.js" ],
+			"targets": [ "desktop", "mobile" ]
+		},
+		"skins.skinjson": {
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
+			"features": {
+				"normalize": true,
+				"elements": true,
+				"content-tables": true,
+				"content-links": true,
+				"content-links-external": false,
+				"content-media": true,
+				"interface-category": true,
+				"toc": true
+			},
+			"targets": [ "desktop", "mobile" ]
+		}
+	},
+	"MessagesDirs": {
+		"SkinJSON": [
+			"i18n"
+		]
+	},
+	"config": {
+		"SkinJSONDisabledSkins": {
+			"value": [
+				"library"
+			]
+		},
+		"SkinJSONEnabledSkins": {
+			"value": {
+				"chameleon": []
+			}
+		},
+		"SkinJSONTestUser": {
+			"value": ""
+		},
+		"SkinJSONExtensionHints": {
+			"value": true
+		},
+		"SkinJSONDebug": {
+			"value": false
+		},
+		"SkinJSONValidate": {
+			"value": false
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "SkinJSON::onBeforePageDisplay",
+		"GetPreferences": "SkinJSON::onGetPreferences",
+		"SiteNoticeAfter": "SkinJSON::onSiteNoticeAfter",
+		"SidebarBeforeOutput": "SkinJSON::onSidebarBeforeOutput",
+		"OutputPageBodyAttributes": "SkinJSON::onOutputPageBodyAttributes",
+		"OutputPageBeforeHTML": "SkinJSON::onOutputPageBeforeHTML",
+		"RequestContextCreateSkin": "SkinJSON::onRequestContextCreateSkin",
+		"SkinAfterPortlet": "SkinJSON::onSkinAfterPortlet",
+		"SkinAfterContent": "SkinJSON::onSkinAfterContent",
+		"SkinAddFooterLinks": "SkinJSON::onSkinAddFooterLinks",
+		"SkinTemplateNavigation::Universal": "SkinJSON::onSkinTemplateNavigationUniversal"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "SkinJSON"
+	},
+	"manifest_version": 2
+}

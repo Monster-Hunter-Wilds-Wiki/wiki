@@ -12,3 +12,4 @@ $wgDefaultSkin = 'vector-2022';
 // wfLoadSkin('Mirage');
 wfLoadSkin('Vector');
 wfLoadSkin('Wilds2025');
+wfLoadSkin('SkinJson');
