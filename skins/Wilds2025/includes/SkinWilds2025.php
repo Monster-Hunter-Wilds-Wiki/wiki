@@ -28,6 +28,10 @@ class SkinWilds2025 extends SkinMustache
       // "talk_uri" => $this->getConfig()->get(MainConfigNames::ScriptPath),
     ];
     $data['user-menu'] = $data['data-portlets']['data-user-menu']['array-items'];
+    // Page
+    $data['page'] = [
+      "title" => $this->titletxt,
+    ];
 
     return $data;
   }

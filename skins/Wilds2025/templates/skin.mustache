@@ -5,14 +5,10 @@
 			<img src="{{resources}}/assets/monster-hunter-wilds-logo-without-shadow-color.png" />
 		</div>
 		<div class="main-content">
-			<div id="siteNotice">{{{html-site-notice}}}</div>
+			{{>SiteNotice}}
 			{{{html-user-message}}}
-			<div class="mw-indicators mw-body-content">
-			{{#array-indicators}}
-			<div id="{{id}}" class="{{class}}">{{{html}}}</div>
-			{{/array-indicators}}
-			</div>
-			{{{html-title-heading}}}
+			{{>Indicators}}
+			{{>PageHeader}}
 			<div id="siteSub">{{msg-tagline}}</div>
 			<div class="mw-body-content">
 				<div id="contentSub">
