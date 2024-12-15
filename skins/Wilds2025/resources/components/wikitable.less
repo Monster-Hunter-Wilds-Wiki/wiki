@@ -1,0 +1,33 @@
+.wikitable {
+  border: none;
+  // tbody {
+
+  // }
+
+  &>caption {
+    color: @text-color;
+    // font-family: @heading-font;
+    padding: @spacing-md 0;
+  }
+
+  &>* {
+
+    &>tr {
+      border: none;
+
+      &>th {
+        background: @darkgrey;
+        color: @text-color;
+        // border: none;
+        border-color: @black;
+      }
+
+      &>td {
+        background: @grey;
+        color: @text-color;
+        // border: none;
+        border-color: @black;
+      }
+    }
+  }
+}
