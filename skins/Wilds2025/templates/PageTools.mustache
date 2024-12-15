@@ -11,8 +11,10 @@
     {{/data-portlets.data-variants}}
     {{#data-portlets.data-views}}{{!>Portlet}}{{/data-portlets.data-views}}
     {{#data-portlets.data-actions}}
-      <h6>Actions</h6>
-      {{>Portlet}}
+      {{^is-empty}}
+        <h6>Actions</h6>
+        {{>Portlet}}
+      {{/is-empty}}
     {{/data-portlets.data-actions}}
     {{#data-portlets-sidebar.array-portlets-rest}}
       <h6>General</h6>
