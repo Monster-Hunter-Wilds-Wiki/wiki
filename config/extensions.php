@@ -25,3 +25,9 @@ wfLoadExtension('intersection');
 // false to use the normal amount of page caching (most efficient), Set to 0 to disable
 // cache altogether (inefficient, but results will never be outdated)
 // $wgDLPMaxCacheTime = 60*60*24;          // How long to cache pages in seconds
+
+# ParserFunctions
+// https://www.mediawiki.org/wiki/Extension:ParserFunctions
+wfLoadExtension('ParserFunctions');
+// $wgPFEnableStringFunctions = false;
+// $wgPFStringLengthLimit = 1000;
