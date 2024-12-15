@@ -18,3 +18,27 @@
     border-color: @primary-color;
   }
 }
+
+.diff-context {
+  background-color: @darkgrey;
+  color: @white;
+  border-color: @grey;
+}
+
+.diff-deletedline {
+  border-color: @secondary-color;
+
+  .diffchange {
+    background-color: @red-2;
+    color: @black;
+  }
+}
+
+.diff-addedline {
+  border-color: @accent-color;
+
+  .diffchange {
+    background-color: @green-3;
+    color: @black;
+  }
+}
