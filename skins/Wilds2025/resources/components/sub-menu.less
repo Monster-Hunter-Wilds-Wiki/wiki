@@ -1,0 +1,79 @@
+.openable-menu {
+  label {
+    cursor: pointer;
+    user-select: none;
+
+    &.label-expand {
+      display: flex;
+      align-items: center;
+      padding-right: 24px;
+
+      span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: -4px;
+        transition: 0.2s ease-in-out;
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &:has(input[type="checkbox"]:checked) {
+    .label-expand span {
+      transform: rotate(180deg);
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &~.sub-menu {
+      display: none;
+    }
+
+    &:checked~.sub-menu {
+      display: block;
+    }
+  }
+
+  .sub-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+    background-color: @black;
+    padding: @spacing-md;
+
+    h6 {
+      font-family: @text-font;
+      width: 100%;
+      border-bottom: solid 1px @grey;
+      margin-bottom: @spacing-sm;
+      color: @ligthgrey;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:not(:first-child) {
+        padding-top: @spacing-lg;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: @spacing-sm;
+
+      li {
+        display: inline-block;
+        margin: 0;
+        padding: 0 !important;
+      }
+    }
+  }
+}
