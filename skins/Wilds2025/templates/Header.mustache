@@ -16,7 +16,8 @@
           <label for="searchInput">{{msg-search}}</label>
         </h3>
         {{{html-input}}}
-        {{{html-button-search}}}
+        <input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" class="searchButton" id="searchButton">
+        <span class="material-icons search-icon">search</span>
       </form>
     </div>
   {{/data-search-box}}

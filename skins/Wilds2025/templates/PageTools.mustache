@@ -1,0 +1,26 @@
+<div class="page-tools">
+  {{#data-portlets}}
+    <label for="page-tools-display">Tools</label>
+    <input type="checkbox" id="page-tools-display"/>
+    <div id="page-tools">
+      {{#data-namespaces}}{{!>Portlet}}{{/data-namespaces}}
+      {{#data-variants}}
+        {{^is-empty}}
+          <h6>Variants</h6>
+          {{>Portlet}}
+        {{/is-empty}}
+      {{/data-variants}}
+      {{#data-views}}{{!>Portlet}}{{/data-views}}
+      {{#data-actions}}
+        <h6>Actions</h6>
+        {{>Portlet}}
+      {{/data-actions}}
+      {{#data-portlets-sidebar}}
+        {{#array-portlets-rest}}
+          <h6>General</h6>
+          {{>Portlet}}
+        {{/array-portlets-rest}}
+      {{/data-portlets-sidebar}}
+    </div>
+  {{/data-portlets}}
+</div>

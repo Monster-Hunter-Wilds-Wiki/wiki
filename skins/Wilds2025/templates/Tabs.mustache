@@ -4,18 +4,7 @@
     {{{html-before-portal}}}
     <ul class="vector-menu-content-list">
       {{#array-list-items}}
-        {{!>MenuListItem}}
-        <li id="{{id}}" class="{{class}}">{{!
-        }}{{#array-links}}{{!
-          }}{{!>Link}}{{!}}
-          <a data-mw="interface"{{#array-attributes}} {{key}}="{{value}}"{{/array-attributes}}>{{!
-            }}{{#icon}}{{!>Icon}}{{/icon}}{{!}}
-            <span class="vector-icon mw-ui-icon-{{.}} mw-ui-icon-wikimedia-{{.}}"></span>
-            {{!}}<span>{{text}}</span>{{!
-          }}</a>
-        {{!}}{{/array-links}}{{!
-        }}{{text}}{{!
-        }}</li>
+        {{>MenuListItem}}
       {{/array-list-items}}
       {{#html-items}}{{{.}}}{{/html-items}}
     </ul>

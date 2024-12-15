@@ -6,7 +6,7 @@ wfLoadExtension('DarkMode');
 
 # TabberNeue
 // https://www.mediawiki.org/wiki/Extension:TabberNeue
-wfLoadExtension('TabberNeue');
+// wfLoadExtension('TabberNeue');
 // $wgTabberNeueEnableAnimation = true;
 // $wgTabberNeueParseTabName	= false;
 // $wgTabberNeueUpdateLocationOnTabChange = true;
@@ -14,7 +14,7 @@ wfLoadExtension('TabberNeue');
 
 # DynamicPageList
 // https://www.mediawiki.org/wiki/Extension:DynamicPageList
-wfLoadExtension('intersection');
+// wfLoadExtension('intersection');
 # Configuration variables. Warning: These use DLP instead of DPL
 # for historical reasons (pretend Dynamic list of pages)
 // $wgDLPmaxCategories = 6;                // Maximum number of categories to look for
