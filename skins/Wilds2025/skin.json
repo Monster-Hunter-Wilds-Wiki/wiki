@@ -5,23 +5,23 @@
 		"Pierre 'Kobaru' Tusseau"
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Example",
-	"descriptionmsg": "example-skin-desc",
-	"namemsg": "skinname-example",
+	"descriptionmsg": "wilds-skin-desc",
+	"namemsg": "skinname-wilds",
 	"license-name": "CC0-1.0",
 	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.41.0"
 	},
 	"ValidSkinNames": {
-		"example": {
+		"wilds2025": {
 			"class": "MediaWiki\\Skins\\Wilds2025\\SkinWilds2025",
 			"args": [
 				{
-					"name": "example",
+					"name": "wilds2025",
 					"supportsMwHeading": true,
 					"responsive": true,
 					"messages": [
-						"example-no-categories",
+						"wilds-no-categories",
 						"sitetitle",
 						"search",
 						"otherlanguages",
@@ -41,7 +41,7 @@
 		}
 	},
 	"MessagesDirs": {
-		"Example": [
+		"Wilds2025": [
 			"i18n"
 		]
 	},

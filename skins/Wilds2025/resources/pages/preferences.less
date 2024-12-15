@@ -1,0 +1,92 @@
+.rootpage-Special_Preferences {
+
+  // Global
+  input[type="search"] {
+    background-color: @darkgrey;
+    color: @text-color;
+    border-color: @grey;
+    border-radius: @spacing-sm;
+  }
+
+  input[type="text"] {
+    background-color: @darkgrey;
+    color: @text-color;
+  }
+
+  input[type="number"] {
+    background-color: @darkgrey;
+    color: @text-color;
+    border-color: @grey;
+  }
+
+  // oo-ui 
+  .oo-ui-layout {
+    border: none;
+  }
+
+  .oo-ui-tabSelectWidget-framed {
+    color: @text-color;
+    background-color: transparent;
+
+    .oo-ui-tabOptionWidget {
+      background: @grey;
+      color: @text-color;
+
+      &:hover {
+        color: @primary-color !important;
+      }
+
+      &.oo-ui-optionWidget {
+        &-selected {
+          background-color: @darkgrey;
+          color: @primary-color;
+
+          &:hover {
+            background-color: @darkgrey !important;
+            color: @secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .oo-ui-buttonElement-framed.oo-ui-widget-enabled>.oo-ui-buttonElement-button {
+    background: @darkgrey;
+    border-color: @grey;
+    color: @text-color;
+
+    &:hover {
+      border-color: @primary-color;
+    }
+  }
+
+  .oo-ui-dropdownInputWidget.oo-ui-widget-enabled {
+    background-color: transparent;
+  }
+
+  .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+    background-color: @darkgrey;
+    color: @text-color;
+    border-color: @grey;
+    border-radius: @spacing-sm;
+  }
+
+  .oo-ui-menuSelectWidget,
+  .oo-ui-dropdownInputWidget.oo-ui-widget-enabled {
+    background-color: @darkgrey;
+  }
+
+  .oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget {
+    color: @text-color;
+  }
+
+  .mw-email-not-authenticated .oo-ui-labelWidget {
+    background-color: @warning-color;
+    border-color: @orange;
+  }
+
+  #preferences .mw-htmlform-submit-buttons {
+    background-color: @darkgrey;
+    border-color: @grey;
+  }
+}

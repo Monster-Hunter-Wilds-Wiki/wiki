@@ -4,7 +4,7 @@
 			"..."
 		]
 	},
-	"skinname-example": "{{optional}}",
-	"example-skin-desc": "{{desc|what=skin|name=Example|url=https://www.mediawiki.org/wiki/Skin:Example}}",
-	"example-no-categories": "Message to show when no categories available"
+	"skinname-wilds": "{{optional}}",
+	"wilds-skin-desc": "{{desc|what=skin|name=Wilds2025|url=https://www.mediawiki.org/wiki/Skin:Example}}",
+	"wilds-no-categories": "Message to show when no categories available"
 }
