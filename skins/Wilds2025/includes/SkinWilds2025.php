@@ -2,8 +2,9 @@
 
 namespace MediaWiki\Skins\Wilds2025;
 
-use MediaWiki\MainConfigNames;
-use MediaWiki\Skin\SkinComponentUtils;
+// use MediaWiki\MainConfigNames;
+// use MediaWiki\Skin\SkinComponentUtils;
+// use MediaWiki\Skins\Wilds2025\Components\WildsComponentDropdown;
 use SkinMustache;
 
 /**
@@ -32,6 +33,13 @@ class SkinWilds2025 extends SkinMustache
     $data['page'] = [
       "title" => $this->titletxt,
     ];
+
+    // Dropdown (not used)
+    // $data['data-page-tools-dropdown'] = new WildsComponentDropdown(
+    //   'wilds-page-tools' . '-dropdown',
+    //   $this->msg('toolbox')->text(),
+    //   'wilds-page-tools' . '-dropdown',
+    // );
 
     return $data;
   }
