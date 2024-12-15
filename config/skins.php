@@ -13,4 +13,8 @@ $wgDefaultSkin = 'vector-2022';
 // wfLoadSkin('Mirage');
 wfLoadSkin('Vector');
 wfLoadSkin('Wilds2025');
-wfLoadSkin('SkinJson');
+
+// Load debug SkinJson skin if in dev
+if ($env['environment'] === 'develop') {
+  wfLoadSkin('SkinJson');
+}
