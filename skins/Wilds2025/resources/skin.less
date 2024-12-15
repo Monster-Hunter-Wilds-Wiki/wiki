@@ -5,6 +5,8 @@
 @import 'mediawiki.skin.variables.less';
 // Import skin specific variables beyond MediaWiki skin variables scope.
 @import 'variables.less';
+// Import mixins;
+@import 'mixins/inputs.less';
 // Import common skin style rules.
 @import 'common.less';
 // Import specific module style rules.
@@ -18,6 +20,7 @@
 // Typography
 /*----------------------------------------------------*/
 @import 'typography/heading.less';
+@import 'typography/preformated.less';
 
 // Components imports
 /*----------------------------------------------------*/
@@ -29,6 +32,7 @@
 @import 'components/toc.less';
 @import 'components/special-page-notes.less';
 @import 'components/page-toolbar.less';
+@import 'components/page-history.less';
 
 // Page templates
 /*----------------------------------------------------*/
@@ -38,3 +42,7 @@
 // Editor
 /*----------------------------------------------------*/
 @import 'editor/form.less';
+
+// Forms
+/*----------------------------------------------------*/
+@import 'forms/inputs.less';

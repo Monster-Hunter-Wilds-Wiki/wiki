@@ -1,0 +1,20 @@
+#pagehistory {
+  li.selected {
+    background-color: fade(@primary-color, 10%);
+    color: @lightgrey;
+  }
+}
+
+.cdx-button:enabled,
+.cdx-button.cdx-button--fake-button--enabled {
+  background-color: @darkgrey;
+  color: @text-color;
+  border-color: @grey;
+
+  &:hover {
+    background-color: @darkgrey;
+    border-color: @lightgrey;
+    color: @primary-color;
+    border-color: @primary-color;
+  }
+}

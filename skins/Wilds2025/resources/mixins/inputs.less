@@ -1,0 +1,23 @@
+.input-text() {
+  background-color: @darkgrey;
+  color: @text-color;
+}
+
+.inputs-all() {
+  input[type="search"] {
+    background-color: @darkgrey;
+    color: @text-color;
+    border-color: @grey;
+    border-radius: @spacing-sm;
+  }
+
+  input[type="text"] {
+    .input-text();
+  }
+
+  input[type="number"] {
+    background-color: @darkgrey;
+    color: @text-color;
+    border-color: @grey;
+  }
+}
