@@ -32,6 +32,8 @@ if ($env === 'null') {
 if ($env['environment'] === 'develop') {
 	$wgUsePathInfo = false;
 	$wgShowExceptionDetails = true;
+	error_reporting(-1);
+	ini_set('display_errors', 1);
 }
 
 ## Uncomment this to disable output compression
@@ -138,3 +140,4 @@ if (str_contains($_SERVER['SERVER_NAME'], 'pierretusseau.com')) {
 include 'config/licenses.php';
 include 'config/skins.php';
 include 'config/extensions.php';
+include 'config/custom-rules.php';

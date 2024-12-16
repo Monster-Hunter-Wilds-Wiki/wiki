@@ -31,3 +31,6 @@ wfLoadExtension('DarkMode');
 wfLoadExtension('ParserFunctions');
 // $wgPFEnableStringFunctions = false;
 // $wgPFStringLengthLimit = 1000;
+
+# ForceAspectRatio
+// wfLoadExtension('ForceAspectRatio');
